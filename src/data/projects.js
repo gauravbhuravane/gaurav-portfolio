@@ -6,7 +6,7 @@ export const projects = [
     tech: ['HTML5', 'CSS3', 'Bootstrap 5', 'JavaScript', 'PHP', 'MySQL'],
     github: 'https://github.com/gauravbhuravane/aquarium-life-cycle',
     demo: 'https://aquarium-life-cycle-1.onrender.com/', 
-    image: '/src/assets/images/fish-tank.jpg',
+    image: 'public/images/fish-tank.jpg',
   },
   {
     title: 'DispatchDaily - News Portal',
@@ -15,7 +15,7 @@ export const projects = [
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     github: 'https://github.com/gauravbhuravane/DispatchDaily',
     demo: 'https://dispatchdaily.onrender.com',
-    image: '/src/assets/images/dispatchdaily.jpg',
+    image: 'public/images/dispatchdaily.jpg',
   },
   {
     title: 'Movie Explorer System',
@@ -24,7 +24,7 @@ export const projects = [
     tech: ['HTML', 'CSS', 'Bootstrap 5', 'PHP', 'MySQL', 'OMDb API'],
     github: 'https://github.com/gauravbhuravane/movie-explorer-system',
     demo: 'https://movie-explorer-system.onrender.com/',
-    image: '/src/assets/images/movie-explorer.jpg',
+    image: 'public/images/movie-explorer.jpg',
   },
   {
     title: 'GitHub Explorer',
@@ -33,6 +33,6 @@ export const projects = [
     tech: ['React.js', 'HTML', 'CSS', 'JavaScript', 'GitHub API'],
     github: 'https://github.com/gauravbhuravane/github-explorer',
     demo: 'https://github-explorer-omega-ten.vercel.app/',
-    image: '/src/assets/images/github-explorer.png',
+    image: 'public/images/github-explorer.png',
   },
 ];
