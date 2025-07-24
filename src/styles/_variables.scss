@@ -1,0 +1,15 @@
+:root {
+  --accent: #0ea5e9;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+[data-theme='dark'] {
+  --background: #111;
+  --text: #e2e2e2;
+}
+
+[data-theme='light'] {
+  --background: #fff;
+  --text: #222;
+}

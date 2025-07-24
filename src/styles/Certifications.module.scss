@@ -1,0 +1,81 @@
+.certifications {
+  position: relative;
+  padding: 6rem 5%;
+  color: #f1f1f1;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, #2c003e, #1a002f 70%);
+    z-index: 0;
+    opacity: 0.85;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    h4 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #ccc;
+
+      span {
+        font-weight: 600;
+        color: #ffccff;
+      }
+    }
+
+    .year {
+      display: block;
+      color: #9fd3c7;
+      font-size: 0.9rem;
+      margin: 0.3rem 0;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

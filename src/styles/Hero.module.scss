@@ -1,0 +1,136 @@
+/* Two‑column hero styling */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 6rem 6%;
+  background: #ffffff;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ---------- LEFT COLUMN ---------- */
+.left {
+  flex: 1 1 50%;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 1.2rem;
+  .name {
+    color: #6a1b9a; /* accent for name */
+  }
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  color: #5f6368;
+  max-width: 650px;
+  margin-bottom: 2.2rem;
+
+  .highlight {
+    color: #6a1b9a;
+    font-weight: 600;
+  }
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+.socialRow {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 2.8rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.socialIcon {
+  background: #2d2d2d;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  transition: background 0.25s;
+
+  &:hover {
+    background: #6a1b9a;
+  }
+}
+
+/* ---------- CTA BUTTONS ---------- */
+.actions {
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 0.9rem 2.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+
+.primaryBtn {
+  background: #6a1b9a;
+  color: #ffffff;
+  &:hover {
+    background: #571587;
+  }
+}
+
+.secondaryBtn {
+  background: #ede7f6;
+  color: #6a1b9a;
+  &:hover {
+    background: #d1c4e9;
+  }
+}
+
+/* ---------- RIGHT COLUMN ---------- */
+.right {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 480px;
+  object-fit: contain;
+}
+
+.flipText {
+  display: inline-block;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-weight: 600;
+  color: #6a1b9a;
+  margin-top: 0.8rem;
+}
+
+.name {
+  color: #6a1b9a;
+  font-weight: 700;
+  display: inline-block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  position: relative;
+}
+
+

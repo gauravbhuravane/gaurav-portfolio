@@ -1,0 +1,152 @@
+.education {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0a0a0a, #1a1d2b);
+  color: #f0f0f0;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, #ff0095, #00ff99, #006aff, #ff0095);
+    animation: spin 12s linear infinite;
+    filter: blur(120px);
+    z-index: 0;
+    top: -50%;
+    left: -50%;
+  }
+}
+
+.title {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #000; // Solid black text
+  z-index: 1;
+}
+
+.fadeSlideIn {
+  opacity: 0;
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background-color: #000000;
+  padding: 2rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff0095, #00ff99, #006aff, #ff0095);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 14px;
+    animation: spin 8s linear infinite;
+    opacity: 0.1;
+  }
+
+  &:hover {
+    background-color: #0f0f0f;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+    transform: scale(1.02);
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+
+  span,
+  p {
+    font-size: 0.95rem;
+    color: #c2c6dc;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
